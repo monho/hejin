@@ -52,7 +52,7 @@ function App() {
       {/* <Quiz/> */}
       <Contact />
       <Comment />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
