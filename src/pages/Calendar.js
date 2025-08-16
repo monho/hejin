@@ -73,7 +73,7 @@ function Calendar() {
             <div key={`empty-${index}`}></div>
           ))}
           {days.map((day) => (
-            <CalendarDay key={day} day={day} isWeddingDay={day === 31} isHoliday={day === 0 }/>
+            <CalendarDay key={day} day={day} isWeddingDay={day === 30} isHoliday={day === 0 }/>
           ))}
         </div>
       </div>
