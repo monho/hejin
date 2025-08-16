@@ -21,8 +21,8 @@ function Modal({ closeModal, who, account, kakaopay }) {
               <div className='modal_line'>{who}</div>
               <div>{account}</div>
           </div>
-        <a href={kakaopay} className='modal__pay-link' role="button">
-           카카오페이 송금하기</a>
+          {/* <a href={kakaopay} className='modal__pay-link' role="button">
+           카카오페이 송금하기</a> */}
           <div className='modal__buttons'>
               <button className='modal__btn-copy' onClick={() => copyToClipboard(account)}>복사</button>
               <button className='modal_btn_close' onClick={closeModal}>닫기</button>
