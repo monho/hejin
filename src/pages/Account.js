@@ -35,11 +35,11 @@ function ContactButton({ person, account, kakaopay }) {
 function Account() {
   const groom_contact = [
     // { person: "신랑 최영민", account: "카카오뱅크 333-2186-485-17", kakaopay: "" },
-    { person: "신랑 최영민, 신부 방혜진", account: "카카오뱅크 333-2186-485-17", kakaopay: "https://qr.kakaopay.com/FMgA7jfVd" },
+    { person: "신랑 최영민, 신부 방혜진", account: "카카오뱅크 3333218648", kakaopay: "" },
   ];
 
   const parent_contact = [
-    { person: "신랑 부모님 (아버지 최권호 , 어머니 손유정)", account: "경남은행 05-22-0138232", kakaopay: "" },
+    { person: "신랑 부모님 (아버지 최권호 , 어머니 손유정)", account: "경남은행 605-22-0138232", kakaopay: "" },
     { person: "신부 부모님 (아버지 방보섭 , 어머니 홍경자)", account: "우체국은행 613687-02-048716", kakaopay: "" },
   ];
 
