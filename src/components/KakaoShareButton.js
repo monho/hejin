@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 const KakaoShareButton = ({
   title = '최영민♡방혜진 결혼식에 초대합니다.',
   description = '2025년 9월, 울산 보람컨벤션 4층 카리나홀',
-  imageUrl = 'https://firebasestorage.googleapis.com/v0/b/heejin-d6d79.firebasestorage.app/o/wedding.jpg?alt=media&token=1a48df2e-6479-4986-a326-3ee0f120d270', // 반드시 HTTPS 절대경로
+  imageUrl = 'https://firebasestorage.googleapis.com/v0/b/heejin-d6d79.firebasestorage.app/o/w.jpg?alt=media&token=dddd58f0-8be0-4eef-a0bd-e678ef75fff2', // 반드시 HTTPS 절대경로
   linkUrl = 'https://hejinwedding.netlify.app',
 }) => {
   const btnRef = useRef(null);
