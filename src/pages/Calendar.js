@@ -17,7 +17,7 @@ function CalendarDay({ day, isWeddingDay, isHoliday }) {
 function Calendar() {
 
     const daysInMonth = 30; // 2024년 9월은 30일까지
-    const firstDayOfWeek = 0; // 2024년 9월 1일은 일요일 (0부터 일요일, 1부터 월요일, ..., 6부터 토요일)
+    const firstDayOfWeek = 1; // 2024년 9월 1일은 일요일 (0부터 일요일, 1부터 월요일, ..., 6부터 토요일)
     const emptyDays = Array.from({ length: firstDayOfWeek }, () => null);
     const days = Array.from({ length: daysInMonth }, (_, index) => index + 1);
 
@@ -73,7 +73,7 @@ function Calendar() {
             <div key={`empty-${index}`}></div>
           ))}
           {days.map((day) => (
-            <CalendarDay key={day} day={day} isWeddingDay={day === 30} isHoliday={day === 0 }/>
+            <CalendarDay key={day} day={day} isWeddingDay={day === 27} isHoliday={day === 0 }/>
           ))}
         </div>
       </div>
