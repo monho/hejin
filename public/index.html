@@ -29,7 +29,10 @@
   <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.6/kakao.min.js" integrity="sha384-WAtVcQYcmTO/N+C1N+1m6Gp8qxh+3NlnP7X1U7qP6P5dQY/MsRBNTh+e1ahJrkEm" crossorigin="anonymous"></script>
 
   <script>
-    Kakao.init('$bee630ce1fe0d493f44ea6cd499da686');  // 사용하려는 앱의 JavaScript 키 입력
+    if (window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init("bee630ce1fe0d493f44ea6cd499da686");
+      console.log("카카오 SDK 초기화:", window.Kakao.isInitialized());
+    }
   </script>
   <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=s4ddmne9i5"></script>
 </head>
