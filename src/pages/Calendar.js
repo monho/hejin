@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import flower from '../images/flower.png'
 
-function CalendarDay({ day, weekday, isWeddingDay, isHoliday }) {
-  // 0=일, 1=월, ... 6=토
+function CalendarDay({ day, weekday, isWeddingDay, isHoliday, style }) {
+  // 0=일, 6=토
   const dayOfWeekClass =
-    weekday === 0 ? 'red' :    // 일요일 빨강
-    weekday === 6 ? 'blue' : ''; // 토요일 파랑
+    weekday === 0 ? 'red' :
+    weekday === 6 ? 'blue' : '';
   const holidayClass = isHoliday ? 'red' : '';
   const specialDayClass = isWeddingDay ? 'heart red' : '';
 
   return (
-    <div className={`calendar__day ${dayOfWeekClass} ${specialDayClass} ${holidayClass}`}>
+    <div className={`calendar__day ${dayOfWeekClass} ${specialDayClass} ${holidayClass}`} style={style}>
       {day}
     </div>
   );
 }
 
 function Calendar() {
-  const daysInMonth = 30;           // 2025년 9월은 30일까지
-  const firstDayOfWeek = 1;         // 2025-09-01 = 월요일(0=일,1=월,...,6=토)
-  const emptyDays = Array.from({ length: firstDayOfWeek }, () => null);
+  const daysInMonth = 30;      // 2025년 9월 = 30일
+  const firstDayOfWeek = 1;    // 2025-09-01 = 월요일(0=일,1=월,...,6=토)
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -29,7 +28,6 @@ function Calendar() {
       const now = new Date();
       const target = new Date('2025-09-27T11:30:00+0900');
       const diff = target.getTime() - now.getTime();
-
       if (diff > 0) {
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -40,10 +38,9 @@ function Calendar() {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
-
-    updateTimer(); // 첫 렌더 즉시 계산
-    const timer = setInterval(updateTimer, 1000);
-    return () => clearInterval(timer);
+    updateTimer();
+    const t = setInterval(updateTimer, 1000);
+    return () => clearInterval(t);
   }, []);
 
   return (
@@ -60,17 +57,18 @@ function Calendar() {
         </div>
 
         <div className="calendar__days">
-          {emptyDays.map((_, i) => (<div key={`empty-${i}`} />))}
           {days.map((day, idx) => {
-            // 요일 계산: (첫째날 요일 + (해당 날짜 - 1)) % 7
-            const weekday = (firstDayOfWeek + (day - 1)) % 7;
+            const weekday = (firstDayOfWeek + idx) % 7;
+            // 1일만 시작 열 지정 (grid는 1~7)
+            const style = day === 1 ? { gridColumnStart: firstDayOfWeek + 1 } : undefined;
             return (
               <CalendarDay
                 key={day}
                 day={day}
                 weekday={weekday}
                 isWeddingDay={day === 27}
-                isHoliday={false}     // 필요하면 공휴일 데이터 넣어 처리
+                isHoliday={false}
+                style={style}
               />
             );
           })}
