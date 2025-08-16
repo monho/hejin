@@ -3,7 +3,7 @@ import flower from '../images/flower.png'
 
 
 function CalendarDay({ day, isWeddingDay, isHoliday }) {
-  const dayOfWeekClass = day % 7 === 1 ? 'red' : day % 7 === 0 ? 'blue' : '';
+  const dayOfWeekClass = day % 7 === 0 ? 'red' : day % 7 === 0 ? 'blue' : '';
   const holidayClass = isHoliday ? 'red' : '';
   const specialDayClass = isWeddingDay ? 'heart red' : '';
 
@@ -17,7 +17,7 @@ function CalendarDay({ day, isWeddingDay, isHoliday }) {
 function Calendar() {
 
     const daysInMonth = 30; // 2024년 9월은 30일까지
-    const firstDayOfWeek = 0; // 2024년 9월 1일은 일요일 (0부터 일요일, 1부터 월요일, ..., 6부터 토요일)
+    const firstDayOfWeek = 1; // 2024년 9월 1일은 일요일 (0부터 일요일, 1부터 월요일, ..., 6부터 토요일)
     const emptyDays = Array.from({ length: firstDayOfWeek }, () => null);
     const days = Array.from({ length: daysInMonth }, (_, index) => index + 1);
 
