@@ -35,7 +35,7 @@ function ContactButton({ person, account, kakaopay }) {
 function Account() {
   const groom_contact = [
     // { person: "신랑 최영민", account: "카카오뱅크 333-2186-485-17", kakaopay: "" },
-    { person: "신랑 최영민, 신부 방혜진", account: "카카오뱅크 3333218648", kakaopay: "" },
+    { person: "신랑 최영민, 신부 방혜진", account: "카카오뱅크 3333218648517", kakaopay: "" },
   ];
 
   const parent_contact = [
