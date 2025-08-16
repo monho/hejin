@@ -27,15 +27,17 @@
     font-weight: bold;
   }
   
-.calendar__days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-}
+  .calendar__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
   
-.calendar__day {
-  height: 36px; display: flex; align-items: center; justify-content: center;
-}
+  .calendar__day {
+    padding: 9px;
+    text-align: center;
+    position: relative; /* 상대 위치 설정 */
+  }
   
   
   .calendar__day.heart {
@@ -60,8 +62,7 @@
   .blue {
     color: blue;
   }
-.calendar__day.red { color: #e94141; }   /* 일요일 */
-.calendar__day.blue { color: #3a6ee8; }  /* 토요일 */
+
   .calendar__remain {
     width: 300px;
     margin: 20px 0;
