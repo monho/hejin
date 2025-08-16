@@ -60,7 +60,7 @@ function Calendar() {
   return (
     <div className='container calendar'>
       <img src={flower} className="flower" alt='flower'/>
-      <h3>2025년 9월 27일 토요일 오전 11시 30분</h3>
+      <h4>2025년 9월 27일 토요일 오전 11시 30분</h4>
       <div className='calendar__line'></div>
       <div className="calendar__body">
         <div className="calendar__weekdays">
