@@ -42,8 +42,8 @@ function Invitation() {
           <div>서로의 삶에 꽃이 될 수 있게</div>
           <div>저희의 단단한 토양이 되어주십시오.</div>
         </div>
-        <FamilyInfo dad="최권호" mom="손유정" child="최영민" relation="의 차남" />
-        <FamilyInfo dad="방보섭" mom="홍경자" child="방혜진" relation="의 차녀" />
+        <FamilyInfo dad="최권호" mom="손유정" child="최영민" relation="의 장남" />
+        <FamilyInfo dad="방보섭" mom="홍경자" child="방혜진" relation="의 장녀" />
         {/* <button className='invitation__btn-contact' onClick={openModal}>연락하기</button> */}
         {isModalOpen && (
           <ContactModal closeModal={closeModal}/>
