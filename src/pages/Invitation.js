@@ -33,7 +33,7 @@ function Invitation() {
           <div>각자 다른 화분에서 자란 넝쿨이</div>
           <div>서로에게 굴러 들어와 </div>
           <div>1121일이라는 시간동안</div>
-          <div> 아름답게 얼시설기 엉켜</div>
+          <div> 아름답게 얼기설기 엉켜</div>
           <div>예쁜 꽃을 피웠습니다.</div>
           <div>이제는 하나의 화분에 모여</div>
           <div>새로운 출발을 하려 합니다. </div>
